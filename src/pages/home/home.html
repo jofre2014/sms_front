@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      SMS app
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+
+    <ion-card-header>
+      Datos
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-list>
+
+            <ion-item>
+                <ion-label floating>telefono</ion-label>
+                <ion-input type="tel" [(ngModel)] = "telefono"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label floating>mensaje</ion-label>
+                <ion-input type="text" [(ngModel)] = "mensaje" ></ion-input>
+              </ion-item>
+          
+          </ion-list>
+          <ion-item>
+            <ion-label fixed>salida</ion-label>
+            <ion-input type="text" [ngModel] = "salida"></ion-input>
+          </ion-item>
+    </ion-card-content>
+  
+  </ion-card>
+  <div padding>
+    <button ion-button color="primary" block (click)="sendSMS()">enviar</button>
+</div>
+
+</ion-content>
